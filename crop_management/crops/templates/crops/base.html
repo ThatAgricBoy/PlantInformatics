@@ -1,0 +1,30 @@
+<!-- base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Crop Management{% endblock %}</title>
+    <!-- Add your CSS stylesheets or links to CDN here -->
+</head>
+<body>
+
+<header>
+    <h1>Crop Management System</h1>
+    <!-- Add any header content or navigation elements here -->
+    <nav>
+        <ul>
+            <li><a href="{% url 'crop_list' %}">All Crops</a></li>
+            <li><a href="{% url 'crop_create' %}">Add Crop</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div id="content">
+    {% block content %}{% endblock %}
+</div>
+
+<!-- Add your JavaScript scripts or links to CDN here -->
+
+</body>
+</html>
